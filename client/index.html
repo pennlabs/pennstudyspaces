@@ -1,0 +1,39 @@
+<head>
+  <title>Penn Study Spaces</title>
+</head>
+
+<body>
+  {{> header }}
+  {{> filterbar}}
+  {{> roomlist}}
+</body>
+
+<template name="header">
+  <h1>pennstudyspaces</h1>
+</template>
+
+<template name="filterbar">
+  <input type="range" min="1" max="15" value="2" />
+  <p>From:</p>
+  <p>{ time picker }</p>
+  <p>To:</p>
+  <p>{ time picker }</p>
+  <p>Date:</p>
+  <p>{ date picker }</p>
+  <p>Options:</p>
+</template>
+
+<template name="roomlist">
+<ul>
+  {{#each rooms}}
+    {{> room}}
+  {{/each}}
+</ul>
+</template>
+
+<template name="room">
+<li>
+  <p class="room-title">{{title}} - {{description}}</p>
+  <button>Share</button>
+</li>
+</template>
