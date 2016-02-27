@@ -6,6 +6,9 @@
   {{> header }}
   {{> filterbar}}
   {{> roomlist}}
+  <div class="map-container">
+    {{> googleMap name="studyMap" options=studyMapOptions}}
+  </div>
 </body>
 
 <template name="header">
